@@ -103,9 +103,6 @@ img {
   color: #2196f3;
 }
 
-
-
-
 .druga_czesc_logo {
   color: var(--secondary-color);
   letter-spacing: 0.03em;
@@ -162,20 +159,16 @@ img {
   color: #212121;
 }
 
-
-
-
-
 .nav__l_i:hover,
 .nav__l_i:focus,
 .adress_footer_l_i:hover,
 .adress_footer_l_i:focus {
   color: var(--main--color);
 }
-.active_page{
+.active_page {
   color: var(--main--color);
 }
-.active_page::after{
+.active_page::after {
   content: "";
   width: 54px;
   height: 4px;
@@ -184,7 +177,6 @@ img {
   position: absolute;
   display: flex;
   margin-top: 25px;
-  
 }
 
 .modal-btn:hover,
@@ -216,22 +208,17 @@ img {
 .adress_footer_l_i {
   text-decoration: none;
 }
-.address_color{
-color: var(--secondary-color);
-
+.address_color {
+  color: var(--secondary-color);
 }
 .address_color:focus,
-.address_color:hover
-{
+.address_color:hover {
   color: var(--main--color);
-  
 }
-.svg_hover{
+.svg_hover {
   fill: currentColor;
   margin-right: 10px;
 }
-
-
 
 .padding_hero {
   padding-bottom: 30px;
@@ -296,18 +283,19 @@ color: var(--secondary-color);
 }
 
 .box {
+  position: relative;
   width: 370px;
   height: 294px;
   padding-right: 15px;
   padding-left: 15px;
 }
-.box:first-child{
-width: 370px;
+.box:first-child {
+  width: 370px;
   height: 294px;
   padding-left: 15px;
 }
-.box:last-child{
-width: 370px;
+.box:last-child {
+  width: 370px;
   height: 294px;
   padding-right: 15px;
 }
@@ -385,10 +373,37 @@ width: 370px;
   margin-right: auto;
 }
 
-.portfolio_swiec:hover,
-.portfolio_swiec:focus {
-  filter: brightness(50%);
-  background-color: rgba(47, 48, 58, 0.4);
+.animation-box {
+  width: 370px;
+  height: 294px;
+  position: relative;
+  overflow: hidden;
+}
+.overflow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  top: 0;
+  left: 0;
+
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.animation-box:hover .overflow {
+  transform: translateY(0);
+  border: 1px solid #eeeeee;
+}
+.overflow > p {
+  margin: 0;
+  padding: 49px 45px 49px 24px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+
+  color: var(--third-color);
 }
 
 .icon_list {
@@ -399,7 +414,6 @@ width: 370px;
   margin-right: auto;
 }
 
-
 .svg_list_i_c_k > .svg_link_i_c_k {
   display: flex;
   justify-content: center;
@@ -407,26 +421,25 @@ width: 370px;
   width: 170px;
   height: 92px;
   margin-left: 10px;
-  border: 1px solid #AFB1B8;
-box-sizing: border-box;
-border-radius: 4px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
   fill: var(--third-color);
 }
 .icon_color:hover,
 .icon_color:focus,
 .svg_link_i_c_k:hover,
-.svg_link_i_c_k:focus{
+.svg_link_i_c_k:focus {
   border-color: var(--secoundary-backgroundcolor);
-  fill:  var(--main--color);
+  fill: var(--main--color);
 }
-.icon_color{
-  
-  fill:#AFB1B8;;
+.icon_color {
+  fill: #afb1b8;
 }
 
-.svg_padding{
-margin-left: 15px;
-margin-right: 15px;
+.svg_padding {
+  margin-left: 15px;
+  margin-right: 15px;
 }
 .svg_link_i_c:hover,
 .svg_link_i_c:focus {
@@ -489,9 +502,8 @@ margin-right: 15px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
-.our_team_bg{
+.our_team_bg {
   background-color: #f5f4fa;
 }
 .pierwsza_czesc_logo_footer {
@@ -513,6 +525,7 @@ margin-right: 15px;
   margin-right: 4px;
   margin-left: 4px;
   border: none;
+  border-radius: 6%;
 }
 
 .filters {
@@ -540,23 +553,34 @@ margin-right: 15px;
 .porftolio_border {
   border-bottom: 1px solid #eeeeee;
 }
+.descrition-at-picture {
+  box-sizing: border-box;
+  width: 370px;
+  height: 70px;
+  padding-top: 27px;
+  background: rgba(47, 48, 58, 0.8);
+  color: var(--main-background-color);
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0px;
+}
 
-
-.is-hidden{
+.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
-.modal{
+.modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   min-width: 528px;
   min-height: 581px;
   background-color: var(--main-background-color);
 }
-.close-btn{
+.close-btn {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -567,4 +591,35 @@ margin-right: 15px;
   border-radius: 50%;
   cursor: pointer;
   box-sizing: border-box;
+}
+.close-btn:hover {
+  animation: puls 2000ms infinite 250ms;
+}
+@keyframes puls {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+
+  transition: opacity 2000ms cubic-bezier(0.075, 0.82, 0.165, 1),
+    visibility 2000ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  transition: opacity 2000ms cubic-bezier(0.075, 0.82, 0.165, 1),
+    visibility 2000ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
