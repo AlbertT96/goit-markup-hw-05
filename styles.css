@@ -103,6 +103,9 @@ img {
   color: #2196f3;
 }
 
+
+
+
 .druga_czesc_logo {
   color: var(--secondary-color);
   letter-spacing: 0.03em;
@@ -169,6 +172,21 @@ img {
 .adress_footer_l_i:focus {
   color: var(--main--color);
 }
+.active_page{
+  color: var(--main--color);
+}
+.active_page::after{
+  content: "";
+  width: 54px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--main--color);
+  position: absolute;
+  display: flex;
+  margin-top: 25px;
+  
+}
+
 .modal-btn:hover,
 .modal-btn:focus,
 .portfolio_btn:hover,
@@ -521,4 +539,32 @@ margin-right: 15px;
 }
 .porftolio_border {
   border-bottom: 1px solid #eeeeee;
+}
+
+
+.is-hidden{
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  min-width: 528px;
+  min-height: 581px;
+  background-color: var(--main-background-color);
+}
+.close-btn{
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--main-background-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  box-sizing: border-box;
 }

@@ -26,7 +26,8 @@
                 </a>
                 <ul class="nav__list list">
                     <li>
-                        <a class="nav__l_i link" href="#">Agency</a>
+                        <a class="nav__l_i link active_page" href="./index.html">Agency</a>
+
                     </li>
                     <li>
                         <a class="nav__l_i link" href="./portfolio.html">Portfolio</a>
@@ -68,7 +69,7 @@
                     <h1 class="znacznik_naglowka padding_hero">
                         efektywne rozwiązania dla waszego biznesu
                     </h1>
-                    <button class="modal-btn potrzeba_białego_tekstu" type="button">
+                    <button class="modal-btn potrzeba_białego_tekstu" type="button" data-modal-open>
                         Zamów usługę</button>
                 </div>
             </div>
@@ -486,7 +487,17 @@
         </div>
     </footer>
 
-<script src="./js/modal.js"></script>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="close-btn" data-modal-close>
+                <svg width="11" height="11">
+                    <use href="./images/close-btn-svg.svg#icon-X"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
